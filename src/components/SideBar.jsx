@@ -54,7 +54,7 @@ const Sidebar = () => {
           mobileMenu ? "left-0" : "-left-full"
         }`}
       >
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <h1 className="uppercase font-bold text-3xl mb-5 p-2 text-[#333333] ">Musix</h1>
         <NavLinks onClick={() => setMobileMenu(false)} />
       </div>
     </>
