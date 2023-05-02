@@ -1,0 +1,32 @@
+
+
+/* // #252525 */
+/* #181818 */
+
+.backGround {
+
+   /* ff 3.6+ */
+   background:-moz-radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 1) 0%, rgba(29, 32, 48, 1) 100%);
+
+   /* safari 5.1+,chrome 10+ */
+   background:-webkit-radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 1) 0%, rgba(29, 32, 48, 1) 100%);
+
+   /* opera 11.10+ */
+   background:-o-radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 1) 0%, rgba(29, 32, 48, 1) 100%);
+
+   /* ie 10+ */
+   background:-ms-radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 1) 0%, rgba(29, 32, 48, 1) 100%);
+
+   /* global 92%+ browsers support */
+   background:radial-gradient(circle at 50% 50%, rgba(20, 20, 25, 1) 0%, rgba(29, 32, 48, 1) 100%);
+
+
+}
+
+.background {
+   background: linear-gradient(to bottom, #0072c6, #D8D8D8);
+}
+
+.sidebackground {
+   background: linear-gradient(to bottom, #0b87df, #eeecec);
+}
