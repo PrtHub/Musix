@@ -22,7 +22,7 @@ const TopCard = ({
         className="w-16 h-16 rounded-lg"
       />
       <div className="flex flex-col justify-center mx-3">
-        <Link to={`/songs/${song.key}`}>
+        <Link to={`/song-details/${song?.key}`}>
           <p className="text-white font-bold text-sm ">{song.title}</p>
         </Link>
         <Link to={`/artist-top-tracks/${song?.artists[0]?.adamid}`}>
