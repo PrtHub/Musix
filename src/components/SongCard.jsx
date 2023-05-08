@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { playPause, setActiveSong } from '../redux/features/playerSlice';
@@ -39,9 +40,9 @@ const SongCard = ({ song, isPlaying, activeSong, data, i}) => {
           </Link>
         </p>
         <p className="text-xs truncate text-gray-200 font-medium mt-1">
-          <Link to={song.artists ? `/artist-top-tracks/${song?.artists[0]?.adamid}` : '/top-artists'}>
+          <div>
             {song.subtitle}
-          </Link>
+          </div>
         </p>
       </div>
       

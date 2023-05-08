@@ -3,7 +3,7 @@ import './App.css'
 import { useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
 import { Sidebar, Searchbar, TopPlay, MusicPlayer } from './components'
-import { Discover, TopArtists, Recommended, Search, ArtistTracks, SongDetails } from './pages';
+import { Discover, TopArtists, Recommended, Search,  SongDetails } from './pages';
 
 
 const App = () => {
@@ -18,14 +18,13 @@ const App = () => {
        <div className='flex-1 flex flex-col background'>
         <Searchbar/>
 
-        <div className='px-6 h-[calc(100vh-25px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse'>
+        <div className='px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse'>
            <div className='flex-1 h-fit'>
             <Routes>
                <Route path="/" element={<Discover />} />
                <Route path="/song-details/:songid" element={<SongDetails />} />
                <Route path="/top-artists" element={<TopArtists />} />
                <Route path="/recommended" element={<Recommended />} />
-               <Route path="/artist-top-tracks/:artistId" element={<ArtistTracks />} />
                <Route path="/search/:searchTerm" element={<Search />} />
             </Routes>
            </div>

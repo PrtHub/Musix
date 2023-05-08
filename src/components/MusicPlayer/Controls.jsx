@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+
 import { MdSkipNext, MdSkipPrevious } from "react-icons/md";
 import {
   BsArrowRepeat,
@@ -9,7 +10,7 @@ import {
 
 const Controls = ({ isPlaying, repeat, setRepeat, shuffle, setShuffle, currentSongs, handlePlayPause, handlePrevSong, handleNextSong }) => {
   return (
-    <div className='flex items-center justify-around  md:w-36 lg:w-52 2xl:w-80'>
+    <div className='flex items-center justify-around w-20 sm:w-24 md:w-36 lg:w-52 2xl:w-80'>
      <BsArrowRepeat
       size={20}
       color={repeat ? 'red' : 'white'}

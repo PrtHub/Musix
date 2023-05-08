@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import cover from '../assets/cover-art.jpg'
 
 const ArtistCard = ({ track }) => {

@@ -16,12 +16,11 @@ export const shazamApi = createApi({
      getRecomanded: builder.query({ query: () => 'songs/list-recommendations?key=484129036'}),
      getSongDetails: builder.query({ query: (songid) =>`/songs/get-details?key=${songid}`}),
      getSearch: builder.query({ query: (searchTerm) => `/search?term=${searchTerm}`}),
-     getArtistTracks: builder.query({ query: (artistId) => `/artists/get-summary?id=${artistId}`}),
     }),
   });
   
 
-export const { useGetTracksQuery, useGetRecomandedQuery, useGetSearchQuery, useGetArtistTracksQuery, useGetSongDetailsQuery } = shazamApi;
+export const { useGetTracksQuery, useGetRecomandedQuery, useGetSearchQuery, useGetSongDetailsQuery } = shazamApi;
 
 
 
