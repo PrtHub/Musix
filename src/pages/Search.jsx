@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useGetSearchQuery } from "../redux/services/shazamApi"
 import { useParams } from "react-router-dom"
 import { Error, Loading, SongCard } from "../components"

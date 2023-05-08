@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
+
 
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import PlayPause from "./PlayPause";
 import { playPause, setActiveSong } from "../redux/features/playerSlice";
 import { useGetRecomandedQuery } from "../redux/services/shazamApi";
+
 
 const TopCard = ({
   song,

@@ -1,12 +1,13 @@
+/* eslint-disable no-unused-vars */
 import { SongCard, Error, Loading } from '../components';
 import { useDispatch, useSelector } from 'react-redux';
 import { useGetTracksQuery } from '../redux/services/shazamApi'
 
+
 const Discover = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying} = useSelector((state) => state.player);
-  const { data, isFetching, error} = useGetTracksQuery();
- 
+  const { data, isFetching, error} = useGetTracksQuery(); 
 
   if(isFetching) return <Loading title="Loading Trending Songs..."/>
   if(error) return <Error/>
