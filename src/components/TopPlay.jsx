@@ -8,6 +8,7 @@ import { playPause, setActiveSong } from "../redux/features/playerSlice";
 import { useGetRecomandedQuery } from "../redux/services/shazamApi";
 
 
+
 const TopCard = ({
   song,
   i,
@@ -28,9 +29,9 @@ const TopCard = ({
         <Link to={`/song-details/${song?.key}`}>
           <p className="text-white font-bold text-sm ">{song.title}</p>
         </Link>
-        <Link to={`/artist-top-tracks/${song?.artists[0]?.adamid}`}>
+        <div>
           <p className="text-gray-200 font-medium text-xs mt-1">{song.subtitle}</p>
-        </Link>
+        </div>
       </div>
     </div>
     <PlayPause
@@ -48,9 +49,10 @@ const TopCard = ({
 const TopPlay = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-  const { data, isFetching, error } = useGetRecomandedQuery();
-  // console.log(data);
+  const { data  } = useGetRecomandedQuery();
+
   const topPlays = data?.tracks?.slice(0, 10);
+
 
   const handleClickPause = () => {
     dispatch(playPause(false));
